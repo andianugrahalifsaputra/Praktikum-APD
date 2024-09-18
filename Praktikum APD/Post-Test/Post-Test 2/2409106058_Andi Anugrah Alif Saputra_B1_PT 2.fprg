@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106058_Andi Anugrah Alif Saputra_B1_PT 2"/>
+        <attribute name="authors" value="acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 07:41:38 PM"/>
+        <attribute name="created" value="YWNlcjtMQVBUT1AtRlFITDRORlE7MjAyNC0wOS0xODswNDoxMjo1MCBQTTsyNzgy"/>
+        <attribute name="edited" value="YWNlcjtMQVBUT1AtRlFITDRORlE7MjAyNC0wOS0xODswNzo0MTozOCBQTTsxOzI5MDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <declare name="usia, tb, bb" type="Integer" array="False" size=""/>
+            <declare name="status" type="Boolean" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan nama anda&quot;" newline="True"/>
+            <input variable="nama"/>
+            <output expression="&quot;Masukkan usia anda(tahun)&quot;" newline="True"/>
+            <input variable="usia"/>
+            <output expression="&quot;Berapa tinggi badan anda?&quot;" newline="True"/>
+            <input variable="tb"/>
+            <output expression="&quot;Berapa berat badan anda?&quot;" newline="True"/>
+            <input variable="bb"/>
+            <output expression="&quot;Apakah anda sudah menikah?&quot;" newline="True"/>
+            <input variable="status"/>
+            <assign variable="total" expression="usia+tb+bb"/>
+            <if expression="status">
+                <then>
+                    <output expression="&quot;=================&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Nama:&quot;&amp;nama&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Tinggi Badan:&quot;&amp;tb&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Berat Badan:&quot;&amp;bb&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Status Pernikahan: Sudah Menikah&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Total:&quot;&amp;total&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;=================&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;=================================&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Nama:&quot;&amp;nama&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Tinggi Badan:&quot;&amp;tb&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Berat Badan:&quot;&amp;bb&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Status Pernikahan: Belum Menikah&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Total:&quot;&amp;total&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;=================================&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
