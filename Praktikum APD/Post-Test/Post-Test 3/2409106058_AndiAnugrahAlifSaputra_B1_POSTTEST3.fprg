@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="2409106058_AndiAnugrahAlifSaputra_POSTTEST3"/>
+        <attribute name="authors" value="acer"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 06:23:48 PM"/>
+        <attribute name="created" value="YWNlcjtMQVBUT1AtRlFITDRORlE7MjAyNC0wOS0yNDsxMDoyNzowMiBQTTsyNzc5"/>
+        <attribute name="edited" value="YWNlcjtMQVBUT1AtRlFITDRORlE7MjAyNC0wOS0yNTswNjoyMzo0OCBQTTszOzI5MDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="menu, kubus, balok, limas, s, p, l, t, hasil, sementara, a" type="Integer" array="False" size=""/>
+            <output expression="&quot;=================================&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&#13;&#10;&amp;&quot;Menu Program Menghitung Luas/Keliling Bangun Datar&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;=================================&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;1. Kubus&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;2.Balok&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;3.Limas&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;Masukkan pilihan anda&quot;" newline="True"/>
+            <input variable="menu"/>
+            <if expression="menu==1">
+                <then>
+                    <output expression="&quot;1.Luas Kubus&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;2.Keliling Kubus&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;Masukkan Pilihan Anda&quot;" newline="True"/>
+                    <input variable="kubus"/>
+                    <if expression="kubus==1">
+                        <then>
+                            <output expression="&quot;Berapa sisinya?&quot;" newline="True"/>
+                            <input variable="s"/>
+                            <assign variable="hasil" expression="6*s*s"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Berapa sisinya?&quot;" newline="True"/>
+                            <input variable="s"/>
+                            <assign variable="hasil" expression="12*s"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="menu==2">
+                        <then>
+                            <output expression="&quot;1.Luas Balok&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;2.Keliling  Balok&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;Masukkan Pilihan Anda&quot;" newline="True"/>
+                            <input variable="balok"/>
+                            <if expression="balok==1">
+                                <then>
+                                    <output expression="&quot;Berapa panjangnya?&quot;" newline="True"/>
+                                    <input variable="p"/>
+                                    <output expression="&quot;Berapa lebarnya?&quot;" newline="True"/>
+                                    <input variable="l"/>
+                                    <output expression="&quot;Berapa tingginya?&quot;" newline="True"/>
+                                    <input variable="t"/>
+                                    <assign variable="sementara" expression="p+l*p*t+t*l"/>
+                                    <assign variable="hasil" expression="2*sementara"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Berapa panjangnya?&quot;" newline="True"/>
+                                    <input variable="p"/>
+                                    <output expression="&quot;Berapa lebarnya?&quot;" newline="True"/>
+                                    <input variable="l"/>
+                                    <output expression="&quot;Berapa tingginya?&quot;" newline="True"/>
+                                    <input variable="t"/>
+                                    <assign variable="sementara" expression="p+l+t"/>
+                                    <assign variable="hasil" expression="4*sementara"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;1.Luas Limas&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;2.Volume Limas&quot;&#13;&#10;&amp;ToChar&#13;&#10;(13)&amp;&#13;&#10;&quot;Masukkan Pilihan Anda&quot;" newline="True"/>
+                            <input variable="limas"/>
+                            <if expression="limas==1">
+                                <then>
+                                    <output expression="&quot;Berapa sisinya?&quot;" newline="True"/>
+                                    <input variable="s"/>
+                                    <output expression="&quot;Berapa alasnya?&quot;" newline="True"/>
+                                    <input variable="a"/>
+                                    <output expression="&quot;Berapa tingginya?&quot;" newline="True"/>
+                                    <input variable="t"/>
+                                    <assign variable="sementara" expression="0.5*a*t"/>
+                                    <assign variable="hasil" expression="s*s+4*sementara"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Berapa sisinya?&quot;" newline="True"/>
+                                    <input variable="s"/>
+                                    <output expression="&quot;Berapa tingginya?&quot;" newline="True"/>
+                                    <input variable="t"/>
+                                    <assign variable="hasil" expression="1/3*s*s*t"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot;Luas/keliling bangun ruang anda adalah&quot;&amp;hasil" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
